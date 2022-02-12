@@ -1,0 +1,3 @@
+include autotune/cli/*.sh
+include autotune/job_query/queries-mysql-new/*.sql
+include autotune/cli/selectedList.txt
