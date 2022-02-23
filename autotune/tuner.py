@@ -5,7 +5,7 @@ import subprocess
 import numpy as np
 from .knobs import gen_continuous
 from .knobs import logger
-from .knobs import ts, knobDF2action, get_data_for_mapping, initialize_knobs, knob2action
+from .knobs import ts, knobDF2action, get_data_for_mapping, initialize_knobs, knob2action,  knobDF2action_onehot, gen_continuous_one_hot
 from .gp_torch import initialize_GP_model, anlytic_optimize_acqf_and_get_observation, get_acqf
 from botorch import fit_gpytorch_model
 import torch
@@ -109,6 +109,9 @@ class MySQLTuner:
         elif self.method == 'VBO':
             self.tune_lhs()
             return self.tune_GP_Botorch()
+        elif self.method == 'OHBO':
+            self.tune_lhs()
+            return self.tune_GP_Botorch_onehot()
         elif self.method == 'MBO':
             return self.tune_openbox()
         elif self.method == 'LHS':
@@ -492,6 +495,7 @@ class MySQLTuner:
             value = self.env.knobs_detail[knob]
             knob_type = value['type']
             if knob_type == 'enum':
+                #pdb.set_trace()
                 space[knob] = hp.choice(knob, value["enum_values"])
                 #try:
                 default_knob[knob] = value["enum_values"].index(str(self.env.default_knobs[knob]))
@@ -513,6 +517,7 @@ class MySQLTuner:
                 min_val, max_val = value['min'], value['max']
                 space[knob] = hp.uniform(knob, min_val, max_val)
                 default_knob[knob] = self.env.default_knobs[knob]
+        #pdb.set_trace()
         best_knobs = fmin(
             fn=self.env.step_TPE,
             space=space,
@@ -530,6 +535,7 @@ class MySQLTuner:
             metrics[0], metrics[1], metrics[2]
         ))
         dim = len(list(self.env.knobs_detail.keys()))
+        #pdb.set_trace()
         lb = 0 * np.ones(dim)
         ub = 1 * np.ones(dim)
         turbo_m = TurboM(
@@ -1031,3 +1037,148 @@ class MySQLTuner:
                 pickle.dump(bo.config_advisor.history_container, f)
                 print("Save history recorde to {}".format(save_file))
 
+
+    def tune_GP_Botorch_onehot(self):
+        feature_len = 0
+        for k in self.env.knobs_detail.keys():
+            if self.env.knobs_detail[k]['type'] == 'enum':
+                feature_len = feature_len + len(self.env.knobs_detail[k]['enum_values'])
+            else:
+                feature_len = feature_len + 1
+
+        fail_count = 0
+        best_action_applied = False
+        if self.lhs_log != '':
+            fn = self.lhs_log
+        else:
+            fn = 'gp_data.res'
+        f = open(fn, 'a')
+        internal_metrics, metrics, resource = self.env.initialize()
+        logger.info('[Env initialized][Metrics tps:{} lat: {} qps: {}]'.format(
+            metrics[0], metrics[1], metrics[2]
+        ))
+        # record initial data in res
+        format_str = '{}|tps_{}|lat_{}|qps_{}|tpsVar_{}|latVar_{}|qpsVar_{}|cpu_{}|readIO_{}|writeIO_{}|virtaulMem_{}|physical_{}|dirty_{}|hit_{}|data_{}|{}|65d\n'
+        res = format_str.format(self.env.default_knobs, str(metrics[0]), str(metrics[1]), str(metrics[2]),
+                                metrics[3], metrics[4],
+                                metrics[5],
+                                resource[0], resource[1], resource[2], resource[3], resource[4],
+                                resource[5], resource[6], resource[7], list(internal_metrics))
+        f.write(res)
+        f.close()
+        best_knob = self.env.default_knobs
+        f = open(fn, 'a')
+        action_df, df_r, internalm_matrix = get_action_data_json(self.lhs_log)
+        if self.y_variable == 'tps':
+            Y_variableL = list(df_r[self.y_variable])
+        else:
+            Y_variableL = list(- df_r[self.y_variable])
+        for i in range(0, len(Y_variableL)):
+            if Y_variableL[i] <= 0 and self.y_variable == 'tps':
+                Y_variableL[i] = min([i for i in Y_variableL if i > 0]) * 0.1
+            if Y_variableL[i] >= 0 and self.y_variable == 'lat':
+                Y_variableL[i] = min([i for i in Y_variableL if i < 0]) * 10
+
+        action_df = knobDF2action_onehot(action_df)  # normalize
+        record_num = len(Y_variableL)
+        X_scaled = action_df[:record_num, :]
+        X_scaled = X_scaled.astype(np.double)
+        # db_size = self.env.get_db_size()
+        # logger.info('Original database size is {}.'.format(db_size))
+        NUM_STEP = 200
+        # set acquisition func
+        acqf_name = 'EI'
+        cadidate_size = 1
+        reusable = False
+        normalized = StandardScaler()
+        best_all = max(Y_variableL)
+        step_begin = len(Y_variableL)
+        self.env.step_count = len(Y_variableL) - 1
+        #print("iteration {}: find knobs with {} {}\n".format(step_begin, best_all, self.y_variable))
+        for global_step in range(step_begin, NUM_STEP):
+            logger.info('entering episode 0 step {}'.format(global_step))
+            Y = Y_variableL.copy()
+            X = X_scaled.copy()
+            if self.workload_map:
+                # matched_X_scaled, matched_tps: matched workload
+                matched_action_df, matched_y = self.mapper.get_matched_data(X_scaled, internalm_matrix)
+                Y = list(matched_y) + Y_variableL
+                X = np.vstack((matched_action_df, X_scaled))
+
+            y_scaled = normalized.fit_transform(np.array(Y).reshape(-1, 1))
+            train_x = torch.tensor(X.astype('float64')).to(device)
+            train_obj = torch.tensor(y_scaled.astype(np.double)).to(device)
+
+            if reusable and model:
+                mll, model = initialize_GP_model(
+                    train_x,
+                    train_obj,
+                    model.state_dict()
+                )
+            else:
+                mll, model = initialize_GP_model(train_x, train_obj)
+                mll, model = initialize_GP_model(train_x, train_obj)
+                fit_gpytorch_model(mll)
+
+            acqf = get_acqf(acqf_name, model, train_obj)
+            bounds = torch.tensor([[0.0] * feature_len, [1.0] * feature_len], device=device,
+                                  dtype=torch.double)
+            best_action_applied = False
+            if fail_count > 2:
+                self.env.db.reinitdb_magic()
+            if fail_count > 1:
+                current_knob = best_knob
+                logger.info('best action applied')
+                best_action_applied = True
+            else:
+                new_x = anlytic_optimize_acqf_and_get_observation(acqf, cadidate_size, bounds)
+                action = new_x.squeeze(0).cpu().numpy()
+                logger.info('[GP-BOTORCH] Action: {}'.format(action))
+                current_knob = gen_continuous_one_hot(action)
+            metrics, internal_metrics, resource = self.env.step_GP(current_knob, best_action_applied)
+
+            X_scaled = np.vstack((X_scaled, new_x.cpu().numpy()))
+            if self.workload_map:
+                internalm_matrix = np.vstack(
+                    (internalm_matrix, internal_metrics.reshape(1, internalm_matrix.shape[1])))
+
+            y_metrics = None
+            if metrics[0] < 0:
+                logger.info('GP-BOTORCH][Episode: 1][Step: {}][Metric tps:{} lat:{} qps:{} cpu:{}]'.format(
+                    global_step, -1, 0, 0, 0))
+                format_str = '{}|tps_0|lat_0|qps_0|[]|65d\n'
+                res = format_str.format(current_knob)
+                if self.y_variable == 'tps':
+                    y_metrics = min([i for i in Y_variableL if i > 0]) * 0.9
+                else:
+                    y_metrics = min([i for i in Y_variableL if i < 0]) * 1.1
+                Y_variableL.append(y_metrics)
+                f.write(res)
+                fail_count = fail_count + 1
+                continue
+            else:
+                fail_count = 0
+                if self.y_variable == 'tps':
+                    y_metrics = metrics[0]
+                else:
+                    y_metrics = - metrics[1]
+                Y_variableL.append(y_metrics)
+
+            logger.info('[GP-BOTORCH][Episode: 1][Step: {}][Metric tps:{} lat:{} qps:{} cpu:{}]'.format(
+                global_step, metrics[0], metrics[1], metrics[2], resource[0]))
+            format_str = '{}|tps_{}|lat_{}|qps_{}|tpsVar_{}|latVar_{}|qpsVar_{}|cpu_{}|readIO_{}|writeIO_{}|virtaulMem_{}|physical_{}|dirty_{}|hit_{}|data_{}|{}|65d\n'
+            res = format_str.format(current_knob, str(metrics[0]), str(metrics[1]), str(metrics[2]),
+                                    metrics[3], metrics[4],
+                                    metrics[5],
+                                    resource[0], resource[1], resource[2], resource[3], resource[4],
+                                    resource[5], resource[6], resource[7], list(internal_metrics))
+            f.write(res)
+            if y_metrics > best_all:
+                best_all = y_metrics
+                best_knob = current_knob
+            # TODO with enough data, no workload mapping
+            if len(Y_variableL) >= 50:
+                self.workload_map = False
+
+        f.close()
+        return

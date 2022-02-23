@@ -442,3 +442,90 @@ def get_data_for_mapping(fn):
     #logger.info("51 metrics: {}".format(fn))
     return knob_df, tpsL, internal_metricM
 
+
+def knobDF2action_onehot(df):
+    feature_len = 0
+    for k in KNOB_DETAILS.keys():
+        if KNOB_DETAILS[k]['type'] == 'enum':
+            feature_len = feature_len + len(KNOB_DETAILS[k]['enum_values'])
+        else:
+            feature_len = feature_len + 1
+
+    actionL_all = []
+    for i in range(df.shape[0]):
+        actionL = []
+        for j in range(df.shape[1]):
+            knob = df.columns[j]
+            value = KNOB_DETAILS[knob]
+            if value['type'] in ["integer", "float"]:
+                min_val, max_val = value['min'], value['max']
+                action = (df[knob].iloc[i] - min_val) / (max_val - min_val)
+                actionL.append(action)
+            else:
+                for tmp in value['enum_values']:
+                    if tmp == df[knob].iloc[i]:
+                        actionL.append(1)
+                    else:
+                        actionL.append(0)
+        actionL_all.append(actionL)
+
+    return np.hstack(actionL_all).reshape(-1, feature_len)
+
+
+def gen_continuous_one_hot(action):
+    knobs = {}
+    action_idx = 0
+
+    for idx in range(len(KNOBS)):
+        name = KNOBS[idx]
+        value = KNOB_DETAILS[name]
+
+        knob_type = value['type']
+
+        if knob_type == 'integer':
+            min_val, max_val = value['min'], value['max']
+            delta = int((max_val - min_val) * action[action_idx])
+            eval_value = min_val + delta
+            eval_value = max(eval_value, min_val)
+            if value.get('stride'):
+                all_vals = np.arange(min_val, max_val, value['stride'])
+                indx = bisect.bisect_left(all_vals, eval_value)
+                if indx == len(all_vals): indx -= 1
+                eval_value = all_vals[indx]
+            # TODO(Hong): add restriction among knobs, truncate, etc
+            knobs[name] = eval_value
+            action_idx = action_idx + 1
+        if knob_type == 'float':
+            min_val, max_val = value['min'], value['max']
+            delta = (max_val - min_val) * action[action_idx]
+            eval_value = min_val + delta
+            eval_value = max(eval_value, min_val)
+            all_vals = np.arange(min_val, max_val, value['stride'])
+            indx = bisect.bisect_left(all_vals, eval_value)
+            if indx == len(all_vals): indx -= 1
+            eval_value = all_vals[indx]
+            knobs[name] = eval_value
+            action_idx = action_idx + 1
+        elif knob_type == 'enum':
+            enum_size = len(value['enum_values'])
+            feature = action[action_idx : action_idx + enum_size]
+            enum_index = feature.argmax()
+            enum_index = min(enum_size - 1, enum_index)
+            eval_value = value['enum_values'][enum_index]
+            # TODO(Hong): add restriction among knobs, truncate, etc
+            knobs[name] = eval_value
+            action_idx = action_idx + enum_size
+        elif knob_type == 'combination':
+            enum_size = len(value['combination_values'])
+            enum_index = int(enum_size * action[action_idx])
+            enum_index = min(enum_size - 1, enum_index)
+            eval_value = value['combination_values'][enum_index]
+            knobs_names = name.strip().split('|')
+            knobs_value = eval_value.strip().split('|')
+            for k, knob_name_tmp in enumerate(knobs_names):
+                knobs[knob_name_tmp] = knobs_value[k]
+            action_idx = action_idx + 1
+
+
+    return knobs
+
