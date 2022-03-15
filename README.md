@@ -38,19 +38,19 @@ Through the benchmark, you can evaluate the tuning optimizers' performance with 
    ```
   The surrogate models can be found in [the Google drive](https://drive.google.com/drive/folders/1qalYsF7fuCB6MewOTPvr8DDZzIj7tIRt?usp=sharing). To easily run the tuning benchmark, you can download the surrogate models and place them in the fold autotune/tuning_benchmark/surrogate.
 
-3. Run the benchmark for knob selection. We use selecting 5 knobs and  tuning JOB via SMAC as an example.
+3. Run the benchmark for knob selection. We use selecting 5 knobs and  tuning SYSBENCH via SMAC as an example.
 ```shell
-bash experiment/compare_knob_selection.sh JOB SMAC 5
+bash experiment/compare_knob_selection.sh SYSBENCH SMAC 5
    ```
-4. Run the  benchmark for optimizer. We use optimization over the configuration space of JOB as an example. You need to set the model_path.
+4. Run the  benchmark for optimizer. We use optimization over the configuration space of SYSBENCH as an example. 
 	
 ```shell
-python run_benchmark.py --method=VBO --knobs_config=experiment/gen_knobs/JOB_shap.json --knobs_num=5 --workload=job  --lhs_log=result/job_5knobs_vbo.res --model
-python run_benchmark.py --method=MBO   --knobs_config=experiment/gen_knobs/JOB_shap.json --knobs_num=5 --workload=job --lhs_log=result/job_5knobs_mbo.res
-python run_benchmark.py --method=SMAC  --knobs_config=experiment/gen_knobs/JOB_shap.json --knobs_num=5 --workload=job   --lhs_log=result/job_5knobs_smac.res
-python run_benchmark.py --method=TPE --knobs_config=experiment/gen_knobs/JOB_shap.json --knobs_num=5 --workload=job  --lhs_log=result/job_5knobs_tpe.res
-python run_benchmark.py --method=TURBO --knobs_config=experiment/gen_knobs/JOB_shap.json --knobs_num=5 --workload=job --lhs_log=result/job_5knobs_turbo.res --tr_init 
-python run_benchmark.py --method=GA --knobs_config=experiment/gen_knobs/JOB_shap.json --knobs_num=5 --workload=job --lhs_log=result/job_5knobs_ga.res 
+python run_benchmark.py --method=VBO --knobs_config=experiment/gen_knobs/SYSBENCH_shap.json --knobs_num=5 --workload=sysbench  --lhs_log=result/sysbench_5knobs_vbo.res --model_path=../tuning_benchmark/surrogate/RF_SYSBENCH_5knob.joblib
+python run_benchmark.py --method=MBO   --knobs_config=experiment/gen_knobs/SYSBENCH_shap.json --knobs_num=5 --workload=sysbench --lhs_log=result/sysbench_5knobs_mbo.res --model_path=../tuning_benchmark/surrogate/RF_SYSBENCH_5knob.joblib
+python run_benchmark.py --method=SMAC  --knobs_config=experiment/gen_knobs/SYSBENCH_shap.json --knobs_num=5 --workload=sysbench   --lhs_log=result/sysbench_5knobs_smac.res --model_path=../tuning_benchmark/surrogate/RF_SYSBENCH_5knob.joblib
+python run_benchmark.py --method=TPE --knobs_config=experiment/gen_knobs/SYSBENCH_shap.json --knobs_num=5 --workload=sysbench  --lhs_log=result/sysbench_5knobs_tpe.res --model_path=../tuning_benchmark/surrogate/RF_SYSBENCH_5knob.joblib
+python run_benchmark.py --method=TURBO --knobs_config=experiment/gen_knobs/SYSBENCH_shap.json --knobs_num=5 --workload=sysbench --lhs_log=result/sysbench_5knobs_turbo.res --tr_init  --model_path=../tuning_benchmark/surrogate/RF_SYSBENCH_5knob.joblib
+python run_benchmark.py --method=GA --knobs_config=experiment/gen_knobs/SYSBENCH_shap.json --knobs_num=5 --workload=sysbench --lhs_log=result/sysbench_5knobs_ga.res --model_path=../tuning_benchmark/surrogate/RF_SYSBENCH_5knob.joblib
    ```
 ### Data Description
 You can find all the training data for the tuning benchmark in autotune/tuning_benchmark/data. 
