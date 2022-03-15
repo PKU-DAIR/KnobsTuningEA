@@ -98,6 +98,7 @@ class BenchEnv(DBEnv):
                  knobs_config,
                  num_metrics,
                  model_path,
+                 database='mysql',
                  log_path='',
                  threads=8,
                  host='localhost',
@@ -140,12 +141,16 @@ class BenchEnv(DBEnv):
         self.threads = threads
         self.best_result = './autotune_best.res'
         self.knobs_config = knobs_config
-        self.knobs_detail_all = initialize_knobs("experiment/gen_knobs/mysql_all_197.json", 197)
-        self.knobs_detail = initialize_knobs(knobs_config, knob_num)
+        if database == 'mysql':
+            self.knobs_detail_all = initialize_knobs("experiment/gen_knobs/mysql_all_197.json", 197)
+        else:
+            self.knobs_detail_all = initialize_knobs("experiment/pg/postgres_shap_1.json", 30) 
         #model_path = '../tuning_benchmark/surrogate/RF_{}_{}knob.joblib'.format(self.workload.lower(), knob_num)
         functions = joblib.load(model_path)
         self.model = functions['model']
         self.names = functions['X-name']
+        self.knobs_detail = initialize_knobs(knobs_config, knob_num, self.names)
+        pdb.set_trace()
         self.default_knobs = get_default_knobs()
         self.rds_mode = rds_mode
         self.oltpbench_config_xml = oltpbench_config_xml
@@ -297,7 +302,7 @@ class BenchEnv(DBEnv):
             else:
                 knob_value = self.knobs_detail_all[k]['default']
 
-            if self.knobs_detail_all[k]['type'] == 'integer':
+            if self.knobs_detail_all[k]['type'] in  ('integer', 'float'):
                 x.append(knob_value )
             else:
                 #pdb.set_trace()

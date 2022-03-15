@@ -267,7 +267,7 @@ def save_knobs(knobs, external_metrics):
     result_str += knob_json
 
 
-def initialize_knobs(knobs_config, num):
+def initialize_knobs(knobs_config, num, keys=[]):
     global KNOBS
     global KNOB_DETAILS
     if num == -1:
@@ -282,10 +282,15 @@ def initialize_knobs(knobs_config, num):
         KNOB_DETAILS = {}
         while i < num:
             key = list(knob_tmp.keys())[i]
-            KNOB_DETAILS[key] = knob_tmp[key]
+            if (len(keys)>0 and key in keys) or  (len(keys)==0): 
+                KNOB_DETAILS[key] = knob_tmp[key]
             i = i + 1
         KNOBS = list(KNOB_DETAILS.keys())
         f.close()
+        if len(KNOB_DETAILS.keys()) < num:
+            for k in keys:
+                if k not in KNOB_DETAILS.keys():
+                    KNOB_DETAILS[k] = knob_tmp[key]
     return KNOB_DETAILS
 
 
