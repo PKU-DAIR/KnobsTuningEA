@@ -40,7 +40,7 @@ Through the benchmark, you can evaluate the tuning optimizers' performance with 
 
 3. Run the benchmark for knob selection. We use selecting 5 knobs and  tuning JOB via SMAC as an example.
 ```shell
-bash experiment/compare_knob_selection_pg.sh JOB SMAC 5
+bash experiment/compare_knob_selection.sh JOB SMAC 5
    ```
 4. Run the  benchmark for optimizer. We use optimization over the configuration space of JOB as an example. You need to set the model_path.
 	
