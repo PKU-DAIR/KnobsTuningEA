@@ -7,7 +7,7 @@
         "scope": "Global, Session",
         "type": "integer",
         "important_rank": 1,
-        "shap_value": 20421.662529355926
+        "shap_value": 21876.07181191817
     },
     "max_heap_table_size": {
         "default": 16777216,
@@ -17,7 +17,7 @@
         "scope": "Global, Session",
         "type": "integer",
         "important_rank": 2,
-        "shap_value": 18327.608798355323
+        "shap_value": 18924.825276999447
     },
     "query_prealloc_size": {
         "default": 8192,
@@ -27,7 +27,7 @@
         "scope": "Global, Session",
         "type": "integer",
         "important_rank": 3,
-        "shap_value": 17921.759581366823
+        "shap_value": 17465.264001631564
     },
     "innodb_thread_concurrency": {
         "default": 0,
@@ -37,7 +37,7 @@
         "scope": "Global",
         "type": "integer",
         "important_rank": 4,
-        "shap_value": 17801.000102807455
+        "shap_value": 17116.816291759573
     },
     "innodb_doublewrite": {
         "default": "ON",
@@ -49,7 +49,7 @@
         "scope": "Global",
         "type": "enum",
         "important_rank": 5,
-        "shap_value": 11563.868517968871
+        "shap_value": 11794.303435160438
     },
     "sort_buffer_size": {
         "default": 262144,
@@ -59,7 +59,7 @@
         "scope": "Global, Session",
         "type": "integer",
         "important_rank": 6,
-        "shap_value": 10526.062153054258
+        "shap_value": 9584.393202872974
     },
     "log_output": {
         "default": "FILE",
@@ -72,7 +72,7 @@
         "scope": "Global",
         "type": "enum",
         "important_rank": 7,
-        "shap_value": 6689.068314819109
+        "shap_value": 6738.451429334823
     },
     "general_log": {
         "default": "OFF",
@@ -84,7 +84,7 @@
         "scope": "Global",
         "type": "enum",
         "important_rank": 8,
-        "shap_value": 4394.538450862928
+        "shap_value": 4382.835978785001
     },
     "innodb_random_read_ahead": {
         "default": "OFF",
@@ -96,17 +96,7 @@
         "scope": "Global",
         "type": "enum",
         "important_rank": 9,
-        "shap_value": 1534.3252893023239
-    },
-    "innodb_log_file_size": {
-        "default": 50331648,
-        "dynamic": "No",
-        "max": 1073741824,
-        "min": 4194304,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 10,
-        "shap_value": 795.6010174611278
+        "shap_value": 1384.3245521307713
     },
     "innodb_buffer_pool_size": {
         "default": 13958643712,
@@ -115,38 +105,8 @@
         "min": 10307921510,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 11,
-        "shap_value": 663.9843712772773
-    },
-    "table_open_cache_instances": {
-        "default": 16,
-        "dynamic": "No",
-        "max": 64,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 12,
-        "shap_value": 614.454311873238
-    },
-    "innodb_change_buffer_max_size": {
-        "default": 25,
-        "dynamic": "Yes",
-        "max": 50,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 13,
-        "shap_value": 472.26416753390475
-    },
-    "innodb_purge_threads": {
-        "default": 4,
-        "dynamic": "No",
-        "max": 32,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 14,
-        "shap_value": 458.44683499107623
+        "important_rank": 10,
+        "shap_value": 736.3400982000484
     },
     "innodb_max_dirty_pages_pct_lwm": {
         "default": 0,
@@ -155,18 +115,28 @@
         "min": 0,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 15,
-        "shap_value": 402.7957954341267
+        "important_rank": 11,
+        "shap_value": 604.5388755392564
     },
-    "innodb_max_purge_lag": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 0,
+    "innodb_purge_threads": {
+        "default": 4,
+        "dynamic": "No",
+        "max": 32,
+        "min": 1,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 16,
-        "shap_value": 401.7516866192497
+        "important_rank": 12,
+        "shap_value": 496.48797353953745
+    },
+    "table_open_cache_instances": {
+        "default": 16,
+        "dynamic": "No",
+        "max": 64,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 13,
+        "shap_value": 460.05444465909034
     },
     "innodb_compression_failure_threshold_pct": {
         "default": 5,
@@ -175,111 +145,8 @@
         "min": 0,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 17,
-        "shap_value": 326.86365824112164
-    },
-    "query_cache_limit": {
-        "default": 1048576,
-        "dynamic": "Yes",
-        "max": 134217728,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 18,
-        "shap_value": 325.0820889407084
-    },
-    "innodb_sort_buffer_size": {
-        "default": 1048576,
-        "dynamic": "No",
-        "max": 67108864,
-        "min": 65536,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 19,
-        "shap_value": 316.5211762132085
-    },
-    "innodb_stats_transient_sample_pages": {
-        "default": 8,
-        "dynamic": "Yes",
-        "max": 100,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 20,
-        "shap_value": 300.46776705212403
-    },
-    "div_precision_increment": {
-        "default": 4,
-        "dynamic": "Yes",
-        "max": 30,
-        "min": 0,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 21,
-        "shap_value": 292.5378612029953
-    },
-    "innodb_ft_total_cache_size": {
-        "default": 640000000,
-        "dynamic": "No",
-        "max": 1600000000,
-        "min": 32000000,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 22,
-        "shap_value": 287.87147408645467
-    },
-    "innodb_lru_scan_depth": {
-        "default": 1024,
-        "dynamic": "Yes",
-        "max": 10240,
-        "min": 100,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 23,
-        "shap_value": 279.17358479014126
-    },
-    "max_write_lock_count": {
-        "default": 18446744073709500416,
-        "dynamic": "Yes",
-        "max": 18446744073709551615,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 24,
-        "shap_value": 279.16092084390965
-    },
-    "optimizer_search_depth": {
-        "default": 62,
-        "dynamic": "Yes",
-        "max": 62,
-        "min": 0,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 25,
-        "shap_value": 264.42213401842065
-    },
-    "session_track_gtids": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "OFF",
-            "OWN_GTID",
-            "ALL_GTIDS"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 26,
-        "shap_value": 262.06218639026565
-    },
-    "join_buffer_size": {
-        "default": 262144,
-        "dynamic": "Yes",
-        "max": 1073741824,
-        "min": 128,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 27,
-        "shap_value": 259.12192425674954
+        "important_rank": 14,
+        "shap_value": 418.12269085176194
     },
     "innodb_change_buffering": {
         "default": "all",
@@ -294,8 +161,88 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 28,
-        "shap_value": 241.97638146241948
+        "important_rank": 15,
+        "shap_value": 411.9799389767959
+    },
+    "innodb_online_alter_log_max_size": {
+        "default": 134217728,
+        "dynamic": "Yes",
+        "max": 18446700000000000000,
+        "min": 65536,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 16,
+        "shap_value": 408.3731660811566
+    },
+    "innodb_purge_batch_size": {
+        "default": 300,
+        "dynamic": "Yes",
+        "max": 5000,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 17,
+        "shap_value": 380.02053411302404
+    },
+    "expire_logs_days": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 99,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 18,
+        "shap_value": 371.6511793461365
+    },
+    "innodb_lru_scan_depth": {
+        "default": 1024,
+        "dynamic": "Yes",
+        "max": 10240,
+        "min": 100,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 19,
+        "shap_value": 353.64511485798533
+    },
+    "innodb_max_dirty_pages_pct": {
+        "default": 75,
+        "dynamic": "Yes",
+        "max": 99,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 20,
+        "shap_value": 340.6722103784896
+    },
+    "innodb_write_io_threads": {
+        "default": 4,
+        "dynamic": "No",
+        "max": 64,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 21,
+        "shap_value": 334.43967693624523
+    },
+    "innodb_stats_transient_sample_pages": {
+        "default": 8,
+        "dynamic": "Yes",
+        "max": 100,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 22,
+        "shap_value": 323.7718394019415
+    },
+    "div_precision_increment": {
+        "default": 4,
+        "dynamic": "Yes",
+        "max": 30,
+        "min": 0,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 23,
+        "shap_value": 293.9974340186468
     },
     "innodb_spin_wait_delay": {
         "default": 6,
@@ -304,51 +251,18 @@
         "min": 0,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 29,
-        "shap_value": 232.84249957306383
+        "important_rank": 24,
+        "shap_value": 291.7032997600623
     },
-    "default_week_format": {
-        "default": 0,
+    "innodb_compression_pad_pct_max": {
+        "default": 50,
         "dynamic": "Yes",
-        "max": 7,
-        "min": 0,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 30,
-        "shap_value": 227.82892102013957
-    },
-    "innodb_default_row_format": {
-        "default": "DYNAMIC",
-        "dynamic": "Yes",
-        "enum_values": [
-            "DYNAMIC",
-            "COMPACT",
-            "REDUNDANT"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 31,
-        "shap_value": 224.8099014476428
-    },
-    "transaction_alloc_block_size": {
-        "default": 8192,
-        "dynamic": "Yes",
-        "max": 131072,
-        "min": 1024,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 32,
-        "shap_value": 204.79088763350836
-    },
-    "innodb_thread_sleep_delay": {
-        "default": 10000,
-        "dynamic": "Yes",
-        "max": 1000000,
+        "max": 75,
         "min": 0,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 33,
-        "shap_value": 200.59275370271777
+        "important_rank": 25,
+        "shap_value": 277.62549977882435
     },
     "innodb_read_ahead_threshold": {
         "default": 56,
@@ -357,38 +271,118 @@
         "min": 0,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 34,
-        "shap_value": 200.33289143268604
+        "important_rank": 26,
+        "shap_value": 271.3768383471353
     },
-    "transaction_prealloc_size": {
-        "default": 4096,
+    "innodb_concurrency_tickets": {
+        "default": 5000,
         "dynamic": "Yes",
-        "max": 131072,
-        "min": 1024,
+        "max": 4294967295,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 27,
+        "shap_value": 270.533913047235
+    },
+    "innodb_log_write_ahead_size": {
+        "default": 8192,
+        "dynamic": "Yes",
+        "max": 16384,
+        "min": 512,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 28,
+        "shap_value": 268.8573410074289
+    },
+    "innodb_change_buffer_max_size": {
+        "default": 25,
+        "dynamic": "Yes",
+        "max": 50,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 29,
+        "shap_value": 265.3684516945018
+    },
+    "long_query_time": {
+        "default": 10,
+        "dynamic": "Yes",
+        "max": 20,
+        "min": 0,
         "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 30,
+        "shap_value": 257.25210904338144
+    },
+    "query_cache_limit": {
+        "default": 1048576,
+        "dynamic": "Yes",
+        "max": 134217728,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 31,
+        "shap_value": 254.21681713475093
+    },
+    "max_user_connections": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 4294967295,
+        "min": 0,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 32,
+        "shap_value": 242.8378976046925
+    },
+    "key_cache_block_size": {
+        "default": 1024,
+        "dynamic": "Yes",
+        "max": 16384,
+        "min": 512,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 33,
+        "shap_value": 218.23022780896258
+    },
+    "ngram_token_size": {
+        "default": 2,
+        "dynamic": "No",
+        "max": 10,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 34,
+        "shap_value": 212.79460960173554
+    },
+    "innodb_autoextend_increment": {
+        "default": 64,
+        "dynamic": "Yes",
+        "max": 1000,
+        "min": 1,
+        "scope": "Global",
         "type": "integer",
         "important_rank": 35,
-        "shap_value": 197.73450163346607
+        "shap_value": 210.31093939474076
     },
-    "net_write_timeout": {
-        "default": 60,
-        "dynamic": "Yes",
-        "max": 120,
-        "min": 1,
-        "scope": "Global, Session",
+    "innodb_sort_buffer_size": {
+        "default": 1048576,
+        "dynamic": "No",
+        "max": 67108864,
+        "min": 65536,
+        "scope": "Global",
         "type": "integer",
         "important_rank": 36,
-        "shap_value": 186.91395232079313
+        "shap_value": 209.64059221522785
     },
-    "net_buffer_length": {
-        "default": 16384,
+    "join_buffer_size": {
+        "default": 262144,
         "dynamic": "Yes",
-        "max": 1048576,
-        "min": 1024,
+        "max": 1073741824,
+        "min": 128,
         "scope": "Global, Session",
         "type": "integer",
         "important_rank": 37,
-        "shap_value": 171.88976111351894
+        "shap_value": 203.0808252314671
     },
     "host_cache_size": {
         "default": 0,
@@ -398,932 +392,17 @@
         "scope": "Global",
         "type": "integer",
         "important_rank": 38,
-        "shap_value": 171.78691829569237
+        "shap_value": 202.1485213333278
     },
-    "innodb_online_alter_log_max_size": {
-        "default": 134217728,
+    "net_write_timeout": {
+        "default": 60,
         "dynamic": "Yes",
-        "max": 18446700000000000000,
-        "min": 65536,
-        "scope": "Global",
+        "max": 120,
+        "min": 1,
+        "scope": "Global, Session",
         "type": "integer",
         "important_rank": 39,
-        "shap_value": 171.62397334924245
-    },
-    "read_buffer_size": {
-        "default": 131072,
-        "dynamic": "Yes",
-        "max": 2147479552,
-        "min": 8192,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 40,
-        "shap_value": 163.9430305213297
-    },
-    "key_cache_block_size": {
-        "default": 1024,
-        "dynamic": "Yes",
-        "max": 16384,
-        "min": 512,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 41,
-        "shap_value": 163.43603763121655
-    },
-    "innodb_log_write_ahead_size": {
-        "default": 8192,
-        "dynamic": "Yes",
-        "max": 16384,
-        "min": 512,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 42,
-        "shap_value": 159.86080037071793
-    },
-    "innodb_disable_sort_file_cache": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 43,
-        "shap_value": 159.75061741169628
-    },
-    "ngram_token_size": {
-        "default": 2,
-        "dynamic": "No",
-        "max": 10,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 44,
-        "shap_value": 154.21626661907453
-    },
-    "max_user_connections": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 0,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 45,
-        "shap_value": 153.65816586721212
-    },
-    "sync_binlog": {
-        "default": 1,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 46,
-        "shap_value": 145.11870811544668
-    },
-    "max_binlog_size": {
-        "default": 1073741824,
-        "dynamic": "Yes",
-        "max": 1073741824,
-        "min": 4096,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 47,
-        "shap_value": 143.67371197688976
-    },
-    "innodb_flush_log_at_timeout": {
-        "default": 1,
-        "dynamic": "Yes",
-        "max": 2700,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 48,
-        "shap_value": 140.76753970543797
-    },
-    "old_passwords": {
-        "default": 0,
-        "dynamic": "Yes",
-        "enum_values": [
-            "0",
-            "2"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 49,
-        "shap_value": 140.14582072693966
-    },
-    "innodb_max_dirty_pages_pct": {
-        "default": 75,
-        "dynamic": "Yes",
-        "max": 99,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 50,
-        "shap_value": 134.46785788230153
-    },
-    "expire_logs_days": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 99,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 51,
-        "shap_value": 129.04527003787197
-    },
-    "innodb_adaptive_max_sleep_delay": {
-        "default": 150000,
-        "dynamic": "Yes",
-        "max": 1000000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 52,
-        "shap_value": 128.1516046164038
-    },
-    "innodb_stats_include_delete_marked": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 53,
-        "shap_value": 127.00738535208527
-    },
-    "eq_range_index_dive_limit": {
-        "default": 200,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 0,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 54,
-        "shap_value": 124.80136756674601
-    },
-    "innodb_ft_cache_size": {
-        "default": 8000000,
-        "dynamic": "No",
-        "max": 80000000,
-        "min": 1600000,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 55,
-        "shap_value": 123.44254206368679
-    },
-    "table_open_cache": {
-        "default": 2000,
-        "dynamic": "Yes",
-        "max": 250000,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 56,
-        "shap_value": 122.00389414358119
-    },
-    "binlog_order_commits": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 57,
-        "shap_value": 121.15827533058399
-    },
-    "innodb_purge_rseg_truncate_frequency": {
-        "default": 128,
-        "dynamic": "Yes",
-        "max": 128,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 58,
-        "shap_value": 120.25124268674249
-    },
-    "thread_cache_size": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 16384,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 59,
-        "shap_value": 118.25617030805545
-    },
-    "ft_min_word_len": {
-        "default": 4,
-        "dynamic": "No",
-        "max": 8,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 60,
-        "shap_value": 118.20279284577208
-    },
-    "connect_timeout": {
-        "default": 10,
-        "dynamic": "Yes",
-        "max": 31536000,
-        "min": 2,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 61,
-        "shap_value": 116.2358764409563
-    },
-    "innodb_compression_level": {
-        "default": 6,
-        "dynamic": "Yes",
-        "max": 9,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 62,
-        "shap_value": 115.75564004336651
-    },
-    "innodb_fill_factor": {
-        "default": 100,
-        "dynamic": "Yes",
-        "max": 100,
-        "min": 10,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 63,
-        "shap_value": 113.01847819461345
-    },
-    "innodb_read_io_threads": {
-        "default": 4,
-        "dynamic": "No",
-        "max": 64,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 64,
-        "shap_value": 107.28759047290278
-    },
-    "innodb_open_files": {
-        "default": 2000,
-        "dynamic": "No",
-        "max": 655350,
-        "min": 10,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 65,
-        "shap_value": 106.55157945447465
-    },
-    "require_secure_transport": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 66,
-        "shap_value": 103.52935250966962
-    },
-    "innodb_adaptive_flushing_lwm": {
-        "default": 10,
-        "dynamic": "Yes",
-        "max": 70,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 67,
-        "shap_value": 103.18526898138869
-    },
-    "innodb_ft_enable_diag_print": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 68,
-        "shap_value": 98.98600360707952
-    },
-    "innodb_ft_min_token_size": {
-        "default": 3,
-        "dynamic": "No",
-        "max": 16,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 69,
-        "shap_value": 98.32100676415318
-    },
-    "innodb_io_capacity_max": {
-        "default": 400,
-        "dynamic": "Yes",
-        "max": 40000,
-        "min": 100,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 70,
-        "shap_value": 98.22119552623903
-    },
-    "innodb_autoextend_increment": {
-        "default": 64,
-        "dynamic": "Yes",
-        "max": 1000,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 71,
-        "shap_value": 98.182533375272
-    },
-    "net_read_timeout": {
-        "default": 30,
-        "dynamic": "Yes",
-        "max": 60,
-        "min": 1,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 72,
-        "shap_value": 97.687602707893
-    },
-    "innodb_compression_pad_pct_max": {
-        "default": 50,
-        "dynamic": "Yes",
-        "max": 75,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 73,
-        "shap_value": 91.5058918385289
-    },
-    "innodb_adaptive_hash_index_parts": {
-        "default": 8,
-        "dynamic": "No",
-        "max": 512,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 74,
-        "shap_value": 90.0372879347304
-    },
-    "binlog_group_commit_sync_delay": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 1000000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 75,
-        "shap_value": 89.87739005560046
-    },
-    "max_error_count": {
-        "default": 64,
-        "dynamic": "Yes",
-        "max": 65535,
-        "min": 0,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 76,
-        "shap_value": 88.48887326713239
-    },
-    "lower_case_table_names": {
-        "default": 0,
-        "dynamic": "No",
-        "max": 2,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 77,
-        "shap_value": 88.27530744048286
-    },
-    "stored_program_cache": {
-        "default": 256,
-        "dynamic": "Yes",
-        "max": 524288,
-        "min": 16,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 78,
-        "shap_value": 87.74276292036862
-    },
-    "ft_query_expansion_limit": {
-        "default": 20,
-        "dynamic": "No",
-        "max": 1000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 79,
-        "shap_value": 87.56433630079245
-    },
-    "innodb_purge_batch_size": {
-        "default": 300,
-        "dynamic": "Yes",
-        "max": 5000,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 80,
-        "shap_value": 87.18943835445289
-    },
-    "innodb_page_cleaners": {
-        "default": 4,
-        "dynamic": "No",
-        "max": 8,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 81,
-        "shap_value": 85.8536838094479
-    },
-    "long_query_time": {
-        "default": 10,
-        "dynamic": "Yes",
-        "max": 20,
-        "min": 0,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 82,
-        "shap_value": 85.29712793201374
-    },
-    "max_join_size": {
-        "default": 18446744073709551615,
-        "dynamic": "Yes",
-        "max": 18446744073709551615,
-        "min": 1,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 83,
-        "shap_value": 83.43966827271797
-    },
-    "query_cache_size": {
-        "default": 1048576,
-        "dynamic": "Yes",
-        "max": 2147483648,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 84,
-        "shap_value": 82.82628865739512
-    },
-    "explicit_defaults_for_timestamp": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 85,
-        "shap_value": 81.3964385007482
-    },
-    "innodb_sync_array_size": {
-        "default": 1,
-        "dynamic": "No",
-        "max": 1024,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 86,
-        "shap_value": 79.23907442569745
-    },
-    "preload_buffer_size": {
-        "default": 32768,
-        "dynamic": "Yes",
-        "max": 1073741824,
-        "min": 1024,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 87,
-        "shap_value": 78.34286771502006
-    },
-    "key_cache_age_threshold": {
-        "default": 300,
-        "dynamic": "Yes",
-        "max": 30000,
-        "min": 100,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 88,
-        "shap_value": 76.34251898367256
-    },
-    "max_points_in_geometry": {
-        "default": 65536,
-        "dynamic": "Yes",
-        "max": 1048576,
-        "min": 3,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 89,
-        "shap_value": 74.66213618886897
-    },
-    "max_prepared_stmt_count": {
-        "default": 16382,
-        "dynamic": "Yes",
-        "max": 1048576,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 90,
-        "shap_value": 74.39139346225609
-    },
-    "open_files_limit": {
-        "default": 50000,
-        "dynamic": "No",
-        "max": 655350,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 91,
-        "shap_value": 72.29329854601724
-    },
-    "innodb_write_io_threads": {
-        "default": 4,
-        "dynamic": "No",
-        "max": 64,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 92,
-        "shap_value": 69.76171597219044
-    },
-    "max_allowed_packet": {
-        "default": 4194304,
-        "dynamic": "Yes",
-        "max": 1073741824,
-        "min": 1024,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 93,
-        "shap_value": 67.88078057593054
-    },
-    "query_cache_min_res_unit": {
-        "default": 4096,
-        "dynamic": "Yes",
-        "max": 65536,
-        "min": 512,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 94,
-        "shap_value": 65.91491060647738
-    },
-    "innodb_ft_result_cache_limit": {
-        "default": 2000000000,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 1000000,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 95,
-        "shap_value": 64.52583604633917
-    },
-    "key_buffer_size": {
-        "default": 8388608,
-        "dynamic": "Yes",
-        "max": 17179869184,
-        "min": 8,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 96,
-        "shap_value": 63.84870014233712
-    },
-    "back_log": {
-        "default": 900,
-        "dynamic": "No",
-        "max": 65535,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 97,
-        "shap_value": 63.68825898284954
-    },
-    "innodb_sync_spin_loops": {
-        "default": 30,
-        "dynamic": "Yes",
-        "max": 30000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 98,
-        "shap_value": 63.374575966200545
-    },
-    "innodb_flush_neighbors": {
-        "default": 1,
-        "dynamic": "Yes",
-        "enum_values": [
-            "0",
-            "1",
-            "2"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 99,
-        "shap_value": 62.849364882987864
-    },
-    "binlog_group_commit_sync_no_delay_count": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 100000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 100,
-        "shap_value": 61.414937537848786
-    },
-    "read_rnd_buffer_size": {
-        "default": 262144,
-        "dynamic": "Yes",
-        "max": 134217728,
-        "min": 1,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 101,
-        "shap_value": 60.71256909285563
-    },
-    "group_concat_max_len": {
-        "default": 1024,
-        "dynamic": "Yes",
-        "max": 18446700000000000000,
-        "min": 4,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 102,
-        "shap_value": 60.40509636335291
-    },
-    "max_length_for_sort_data": {
-        "default": 1024,
-        "dynamic": "Yes",
-        "max": 8388608,
-        "min": 4,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 103,
-        "shap_value": 59.63988827721906
-    },
-    "flush_time": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 10,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 104,
-        "shap_value": 55.95293949997892
-    },
-    "innodb_rollback_segments": {
-        "default": 128,
-        "dynamic": "Yes",
-        "max": 128,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 105,
-        "shap_value": 55.7216058552906
-    },
-    "query_alloc_block_size": {
-        "default": 8192,
-        "dynamic": "Yes",
-        "max": 134217728,
-        "min": 1024,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 106,
-        "shap_value": 53.62688976418976
-    },
-    "binlog_error_action": {
-        "default": "ABORT_SERVER",
-        "dynamic": "Yes",
-        "enum_values": [
-            "IGNORE_ERROR",
-            "ABORT_SERVER"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 107,
-        "shap_value": 52.05690542921629
-    },
-    "query_cache_wlock_invalidate": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 108,
-        "shap_value": 51.60203126355876
-    },
-    "key_cache_division_limit": {
-        "default": 100,
-        "dynamic": "Yes",
-        "max": 100,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 109,
-        "shap_value": 50.69872720080281
-    },
-    "innodb_commit_concurrency": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 1000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 110,
-        "shap_value": 50.325002064349746
-    },
-    "innodb_stats_auto_recalc": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 111,
-        "shap_value": 50.03186860240885
-    },
-    "innodb_log_buffer_size": {
-        "default": 16777216,
-        "dynamic": "No",
-        "max": 4294967295,
-        "min": 262144,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 112,
-        "shap_value": 49.91204409415173
-    },
-    "mysql_native_password_proxy_users": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 113,
-        "shap_value": 48.67306822022857
-    },
-    "innodb_max_purge_lag_delay": {
-        "default": 0,
-        "dynamic": "Yes",
-        "max": 10000000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 114,
-        "shap_value": 48.17440805796829
-    },
-    "innodb_concurrency_tickets": {
-        "default": 5000,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 115,
-        "shap_value": 47.147821295625235
-    },
-    "binlog_stmt_cache_size": {
-        "default": 32768,
-        "dynamic": "Yes",
-        "max": 4294967296,
-        "min": 4096,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 116,
-        "shap_value": 45.94525329550033
-    },
-    "innodb_deadlock_detect": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 117,
-        "shap_value": 45.06751941162041
-    },
-    "max_binlog_cache_size": {
-        "default": 18446744073709500416,
-        "dynamic": "Yes",
-        "max": 18446744073709551615,
-        "min": 4096,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 118,
-        "shap_value": 44.37289724457431
-    },
-    "innodb_ft_sort_pll_degree": {
-        "default": 2,
-        "dynamic": "No",
-        "max": 16,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 119,
-        "shap_value": 43.75776811076024
-    },
-    "innodb_old_blocks_time": {
-        "default": 1000,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 120,
-        "shap_value": 42.00108207729685
-    },
-    "innodb_flush_sync": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 121,
-        "shap_value": 41.96926895329817
-    },
-    "max_connections": {
-        "default": 151,
-        "dynamic": "Yes",
-        "max": 100000,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 122,
-        "shap_value": 41.854537736198075
-    },
-    "innodb_strict_mode": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 123,
-        "shap_value": 41.51352929767392
-    },
-    "low_priority_updates": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 124,
-        "shap_value": 41.42351780873219
-    },
-    "innodb_io_capacity": {
-        "default": 200,
-        "dynamic": "Yes",
-        "max": 2000000,
-        "min": 100,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 125,
-        "shap_value": 41.116953513817734
-    },
-    "innodb_table_locks": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 126,
-        "shap_value": 40.71322118387787
-    },
-    "max_sort_length": {
-        "default": 1024,
-        "dynamic": "Yes",
-        "max": 8388608,
-        "min": 4,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 127,
-        "shap_value": 38.50036553425681
+        "shap_value": 200.38120932084448
     },
     "binlog_row_image": {
         "default": "full",
@@ -1335,8 +414,250 @@
         ],
         "scope": "Global, Session",
         "type": "enum",
-        "important_rank": 128,
-        "shap_value": 36.87108690539232
+        "important_rank": 40,
+        "shap_value": 198.95750520535626
+    },
+    "table_open_cache": {
+        "default": 2000,
+        "dynamic": "Yes",
+        "max": 250000,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 41,
+        "shap_value": 185.6285785388141
+    },
+    "innodb_adaptive_max_sleep_delay": {
+        "default": 150000,
+        "dynamic": "Yes",
+        "max": 1000000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 42,
+        "shap_value": 181.01441400202225
+    },
+    "innodb_ft_total_cache_size": {
+        "default": 640000000,
+        "dynamic": "No",
+        "max": 1600000000,
+        "min": 32000000,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 43,
+        "shap_value": 171.48023551688172
+    },
+    "read_buffer_size": {
+        "default": 131072,
+        "dynamic": "Yes",
+        "max": 2147479552,
+        "min": 8192,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 44,
+        "shap_value": 163.87841525539284
+    },
+    "eq_range_index_dive_limit": {
+        "default": 200,
+        "dynamic": "Yes",
+        "max": 4294967295,
+        "min": 0,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 45,
+        "shap_value": 163.39647799814833
+    },
+    "innodb_flush_log_at_timeout": {
+        "default": 1,
+        "dynamic": "Yes",
+        "max": 2700,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 46,
+        "shap_value": 159.1545214215993
+    },
+    "key_cache_age_threshold": {
+        "default": 300,
+        "dynamic": "Yes",
+        "max": 30000,
+        "min": 100,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 47,
+        "shap_value": 151.5913291893714
+    },
+    "range_alloc_block_size": {
+        "default": 4096,
+        "dynamic": "Yes",
+        "max": 65536,
+        "min": 4096,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 48,
+        "shap_value": 148.84098414578222
+    },
+    "innodb_ft_sort_pll_degree": {
+        "default": 2,
+        "dynamic": "No",
+        "max": 16,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 49,
+        "shap_value": 145.20996135508938
+    },
+    "innodb_ft_min_token_size": {
+        "default": 3,
+        "dynamic": "No",
+        "max": 16,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 50,
+        "shap_value": 143.77313013930868
+    },
+    "innodb_read_io_threads": {
+        "default": 4,
+        "dynamic": "No",
+        "max": 64,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 51,
+        "shap_value": 138.28126725478774
+    },
+    "max_binlog_size": {
+        "default": 1073741824,
+        "dynamic": "Yes",
+        "max": 1073741824,
+        "min": 4096,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 52,
+        "shap_value": 134.046583935514
+    },
+    "innodb_table_locks": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 53,
+        "shap_value": 132.47917011978942
+    },
+    "innodb_ft_result_cache_limit": {
+        "default": 2000000000,
+        "dynamic": "Yes",
+        "max": 4294967295,
+        "min": 1000000,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 54,
+        "shap_value": 132.15497464671805
+    },
+    "innodb_purge_rseg_truncate_frequency": {
+        "default": 128,
+        "dynamic": "Yes",
+        "max": 128,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 55,
+        "shap_value": 127.46940563822453
+    },
+    "max_binlog_stmt_cache_size": {
+        "default": 18446744073709500416,
+        "dynamic": "Yes",
+        "max": 18446744073709500416,
+        "min": 4096,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 56,
+        "shap_value": 124.50242840893942
+    },
+    "table_definition_cache": {
+        "default": 1400,
+        "dynamic": "Yes",
+        "max": 524288,
+        "min": 400,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 57,
+        "shap_value": 121.50250846402419
+    },
+    "innodb_thread_sleep_delay": {
+        "default": 10000,
+        "dynamic": "Yes",
+        "max": 1000000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 58,
+        "shap_value": 120.70405315927101
+    },
+    "innodb_adaptive_flushing_lwm": {
+        "default": 10,
+        "dynamic": "Yes",
+        "max": 70,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 59,
+        "shap_value": 116.56801846543691
+    },
+    "max_write_lock_count": {
+        "default": 18446744073709500416,
+        "dynamic": "Yes",
+        "max": 18446744073709551615,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 60,
+        "shap_value": 114.07779507913732
+    },
+    "innodb_io_capacity_max": {
+        "default": 400,
+        "dynamic": "Yes",
+        "max": 40000,
+        "min": 100,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 61,
+        "shap_value": 112.30060783972746
+    },
+    "innodb_max_purge_lag": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 4294967295,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 62,
+        "shap_value": 107.49549472398994
+    },
+    "sync_binlog": {
+        "default": 1,
+        "dynamic": "Yes",
+        "max": 4294967295,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 63,
+        "shap_value": 104.31756691120668
+    },
+    "optimizer_search_depth": {
+        "default": 62,
+        "dynamic": "Yes",
+        "max": 62,
+        "min": 0,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 64,
+        "shap_value": 100.03526228193267
     },
     "session_track_schema": {
         "default": "ON",
@@ -1347,358 +668,120 @@
         ],
         "scope": "Global, Session",
         "type": "enum",
-        "important_rank": 129,
-        "shap_value": 36.647149563518155
+        "important_rank": 65,
+        "shap_value": 98.86172263612377
     },
-    "automatic_sp_privileges": {
-        "default": "ON",
+    "transaction_prealloc_size": {
+        "default": 4096,
         "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 130,
-        "shap_value": 36.37835551888968
-    },
-    "log_bin_trust_function_creators": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 131,
-        "shap_value": 34.12816670688475
-    },
-    "old_alter_table": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
+        "max": 131072,
+        "min": 1024,
         "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 132,
-        "shap_value": 33.70696639446811
+        "type": "integer",
+        "important_rank": 66,
+        "shap_value": 90.77046261341964
     },
-    "innodb_replication_delay": {
+    "thread_cache_size": {
         "default": 0,
-        "dynamic": "Yes",
-        "max": 10000,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 133,
-        "shap_value": 31.593940506520582
-    },
-    "offline_mode": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 134,
-        "shap_value": 30.734407872759284
-    },
-    "innodb_optimize_fulltext_only": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 135,
-        "shap_value": 29.027152358500302
-    },
-    "innodb_stats_on_metadata": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 136,
-        "shap_value": 28.784452737673032
-    },
-    "log_timestamps": {
-        "default": "UTC",
-        "dynamic": "Yes",
-        "enum_values": [
-            "UTC",
-            "SYSTEM"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 137,
-        "shap_value": 28.761371406153156
-    },
-    "max_binlog_stmt_cache_size": {
-        "default": 18446744073709500416,
-        "dynamic": "Yes",
-        "max": 18446744073709500416,
-        "min": 4096,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 138,
-        "shap_value": 28.180921286576055
-    },
-    "log_syslog_include_pid": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 139,
-        "shap_value": 28.173882235445962
-    },
-    "innodb_print_all_deadlocks": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 140,
-        "shap_value": 27.090848322571542
-    },
-    "concurrent_insert": {
-        "default": "AUTO",
-        "dynamic": "Yes",
-        "enum_values": [
-            "NEVER",
-            "AUTO",
-            "ALWAYS"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 141,
-        "shap_value": 26.841176404194723
-    },
-    "max_delayed_threads": {
-        "default": 20,
         "dynamic": "Yes",
         "max": 16384,
         "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 67,
+        "shap_value": 88.66477631384191
+    },
+    "query_cache_size": {
+        "default": 1048576,
+        "dynamic": "Yes",
+        "max": 2147483648,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 68,
+        "shap_value": 87.72571026728407
+    },
+    "flush_time": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 10,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 69,
+        "shap_value": 87.62272178975063
+    },
+    "low_priority_updates": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 70,
+        "shap_value": 86.0370864011216
+    },
+    "ft_query_expansion_limit": {
+        "default": 20,
+        "dynamic": "No",
+        "max": 1000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 71,
+        "shap_value": 83.93036583234407
+    },
+    "max_error_count": {
+        "default": 64,
+        "dynamic": "Yes",
+        "max": 65535,
+        "min": 0,
         "scope": "Global, Session",
         "type": "integer",
-        "important_rank": 142,
-        "shap_value": 26.615548710984974
+        "important_rank": 72,
+        "shap_value": 83.44163795121891
     },
-    "log_slow_admin_statements": {
-        "default": "OFF",
+    "binlog_group_commit_sync_no_delay_count": {
+        "default": 0,
         "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 143,
-        "shap_value": 25.995035645666423
-    },
-    "innodb_file_per_table": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 144,
-        "shap_value": 23.82151301049297
-    },
-    "innodb_max_undo_log_size": {
-        "default": 1073741824,
-        "dynamic": "Yes",
-        "max": 18446700000000000000,
-        "min": 10485760,
+        "max": 100000,
+        "min": 0,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 145,
-        "shap_value": 22.806862264789626
+        "important_rank": 73,
+        "shap_value": 82.49954437119553
     },
-    "innodb_flushing_avg_loops": {
-        "default": 30,
-        "dynamic": "Yes",
-        "max": 1000,
-        "min": 1,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 146,
-        "shap_value": 22.737692259780104
-    },
-    "log_statements_unsafe_for_binlog": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 147,
-        "shap_value": 22.595795425363583
-    },
-    "innodb_rollback_on_timeout": {
-        "default": "OFF",
-        "dynamic": "No",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 148,
-        "shap_value": 20.231728277340093
-    },
-    "innodb_ft_max_token_size": {
-        "default": 84,
-        "dynamic": "No",
-        "max": 84,
-        "min": 10,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 149,
-        "shap_value": 19.63552045995086
-    },
-    "innodb_ft_num_word_optimize": {
-        "default": 2000,
-        "dynamic": "Yes",
-        "max": 10000,
-        "min": 1000,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 150,
-        "shap_value": 19.510825025127488
-    },
-    "innodb_api_enable_binlog": {
-        "default": "OFF",
-        "dynamic": "No",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 151,
-        "shap_value": 19.483850442460433
-    },
-    "max_seeks_for_key": {
-        "default": 18446744073709500416,
+    "max_join_size": {
+        "default": 18446744073709551615,
         "dynamic": "Yes",
         "max": 18446744073709551615,
         "min": 1,
         "scope": "Global, Session",
         "type": "integer",
-        "important_rank": 152,
-        "shap_value": 19.33737990424366
+        "important_rank": 74,
+        "shap_value": 79.75411883187917
     },
-    "optimizer_prune_level": {
-        "default": 1,
+    "innodb_log_file_size": {
+        "default": 50331648,
+        "dynamic": "No",
+        "max": 1073741824,
+        "min": 4194304,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 75,
+        "shap_value": 78.51106096704545
+    },
+    "default_week_format": {
+        "default": 0,
         "dynamic": "Yes",
-        "max": 1,
+        "max": 7,
         "min": 0,
         "scope": "Global, Session",
         "type": "integer",
-        "important_rank": 153,
-        "shap_value": 18.295497286304936
-    },
-    "max_digest_length": {
-        "default": 1024,
-        "dynamic": "No",
-        "max": 1048576,
-        "min": 0,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 154,
-        "shap_value": 17.64270148491978
-    },
-    "session_track_state_change": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 155,
-        "shap_value": 17.481311432611886
-    },
-    "table_definition_cache": {
-        "default": 1400,
-        "dynamic": "Yes",
-        "max": 524288,
-        "min": 400,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 156,
-        "shap_value": 16.55718514000135
-    },
-    "innodb_flush_log_at_trx_commit": {
-        "default": 1,
-        "dynamic": "Yes",
-        "enum_values": [
-            "0",
-            "1",
-            "2"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 157,
-        "shap_value": 16.508409407260864
-    },
-    "skip_name_resolve": {
-        "default": "OFF",
-        "dynamic": "No",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 158,
-        "shap_value": 15.932620277838762
-    },
-    "range_alloc_block_size": {
-        "default": 4096,
-        "dynamic": "Yes",
-        "max": 65536,
-        "min": 4096,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 159,
-        "shap_value": 15.793972553640359
-    },
-    "log_builtin_as_identified_by_password": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 160,
-        "shap_value": 15.412460811314377
+        "important_rank": 76,
+        "shap_value": 75.77916807521122
     },
     "session_track_transaction_info": {
         "default": "OFF",
@@ -1710,44 +793,18 @@
         ],
         "scope": "Global, Session",
         "type": "enum",
-        "important_rank": 161,
-        "shap_value": 15.317865884750667
+        "important_rank": 77,
+        "shap_value": 74.44149199220377
     },
-    "innodb_adaptive_flushing": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
+    "open_files_limit": {
+        "default": 50000,
+        "dynamic": "No",
+        "max": 655350,
+        "min": 0,
         "scope": "Global",
-        "type": "enum",
-        "important_rank": 162,
-        "shap_value": 15.03508875000146
-    },
-    "innodb_ft_enable_stopword": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 163,
-        "shap_value": 14.312983776067796
-    },
-    "binlog_direct_non_transactional_updates": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 164,
-        "shap_value": 13.574864101319097
+        "type": "integer",
+        "important_rank": 78,
+        "shap_value": 74.3278594263683
     },
     "flush": {
         "default": "OFF",
@@ -1758,10 +815,76 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 165,
-        "shap_value": 12.586209918089615
+        "important_rank": 79,
+        "shap_value": 73.73631466133216
     },
-    "binlog_rows_query_log_events": {
+    "innodb_flush_neighbors": {
+        "default": 1,
+        "dynamic": "Yes",
+        "enum_values": [
+            "0",
+            "1",
+            "2"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 80,
+        "shap_value": 73.19741479613734
+    },
+    "concurrent_insert": {
+        "default": "AUTO",
+        "dynamic": "Yes",
+        "enum_values": [
+            "NEVER",
+            "AUTO",
+            "ALWAYS"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 81,
+        "shap_value": 72.72090622091856
+    },
+    "innodb_fill_factor": {
+        "default": 100,
+        "dynamic": "Yes",
+        "max": 100,
+        "min": 10,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 82,
+        "shap_value": 72.4740136812956
+    },
+    "back_log": {
+        "default": 900,
+        "dynamic": "No",
+        "max": 65535,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 83,
+        "shap_value": 70.46247184415915
+    },
+    "net_read_timeout": {
+        "default": 30,
+        "dynamic": "Yes",
+        "max": 60,
+        "min": 1,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 84,
+        "shap_value": 68.93840199638127
+    },
+    "innodb_compression_level": {
+        "default": 6,
+        "dynamic": "Yes",
+        "max": 9,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 85,
+        "shap_value": 68.69329073394314
+    },
+    "binlog_direct_non_transactional_updates": {
         "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
@@ -1770,34 +893,10 @@
         ],
         "scope": "Global, Session",
         "type": "enum",
-        "important_rank": 166,
-        "shap_value": 11.658439416882574
+        "important_rank": 86,
+        "shap_value": 67.91979245961257
     },
-    "master_verify_checksum": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 167,
-        "shap_value": 10.929784321643403
-    },
-    "slow_query_log": {
-        "default": "OFF",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 168,
-        "shap_value": 10.817585992306176
-    },
-    "end_markers_in_json": {
+    "session_track_state_change": {
         "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
@@ -1806,10 +905,42 @@
         ],
         "scope": "Global, Session",
         "type": "enum",
-        "important_rank": 169,
-        "shap_value": 10.793354372443385
+        "important_rank": 87,
+        "shap_value": 66.55879844847097
     },
-    "innodb_cmp_per_index_enabled": {
+    "automatic_sp_privileges": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 88,
+        "shap_value": 65.12379507896225
+    },
+    "transaction_alloc_block_size": {
+        "default": 8192,
+        "dynamic": "Yes",
+        "max": 131072,
+        "min": 1024,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 89,
+        "shap_value": 64.75290500792406
+    },
+    "innodb_old_blocks_time": {
+        "default": 1000,
+        "dynamic": "Yes",
+        "max": 4294967295,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 90,
+        "shap_value": 64.15042399502997
+    },
+    "show_compatibility_56": {
         "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
@@ -1818,8 +949,135 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 170,
-        "shap_value": 10.690312061136105
+        "important_rank": 91,
+        "shap_value": 63.48505958866113
+    },
+    "innodb_replication_delay": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 10000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 92,
+        "shap_value": 62.2855023368131
+    },
+    "max_sort_length": {
+        "default": 1024,
+        "dynamic": "Yes",
+        "max": 8388608,
+        "min": 4,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 93,
+        "shap_value": 62.1490859734907
+    },
+    "innodb_page_cleaners": {
+        "default": 4,
+        "dynamic": "No",
+        "max": 8,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 94,
+        "shap_value": 61.32307332787272
+    },
+    "innodb_sync_spin_loops": {
+        "default": 30,
+        "dynamic": "Yes",
+        "max": 30000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 95,
+        "shap_value": 60.48085525966367
+    },
+    "explicit_defaults_for_timestamp": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 96,
+        "shap_value": 60.00343732016209
+    },
+    "ft_min_word_len": {
+        "default": 4,
+        "dynamic": "No",
+        "max": 8,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 97,
+        "shap_value": 59.890961523696646
+    },
+    "stored_program_cache": {
+        "default": 256,
+        "dynamic": "Yes",
+        "max": 524288,
+        "min": 16,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 98,
+        "shap_value": 59.16055363264472
+    },
+    "connect_timeout": {
+        "default": 10,
+        "dynamic": "Yes",
+        "max": 31536000,
+        "min": 2,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 99,
+        "shap_value": 59.03152603161646
+    },
+    "innodb_adaptive_hash_index_parts": {
+        "default": 8,
+        "dynamic": "No",
+        "max": 512,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 100,
+        "shap_value": 58.526384082810225
+    },
+    "session_track_gtids": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "OFF",
+            "OWN_GTID",
+            "ALL_GTIDS"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 101,
+        "shap_value": 58.38898968549539
+    },
+    "innodb_sync_array_size": {
+        "default": 1,
+        "dynamic": "No",
+        "max": 1024,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 102,
+        "shap_value": 57.65376189104207
+    },
+    "log_bin_trust_function_creators": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 103,
+        "shap_value": 56.791126418644225
     },
     "innodb_api_disable_rowlock": {
         "default": "OFF",
@@ -1830,82 +1088,31 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 171,
-        "shap_value": 10.482414188048342
+        "important_rank": 104,
+        "shap_value": 56.74497764302789
     },
-    "log_slave_updates": {
-        "default": "OFF",
-        "dynamic": "No",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 172,
-        "shap_value": 9.919468654590329
-    },
-    "log_bin_use_v1_row_events": {
-        "default": "OFF",
-        "dynamic": "No",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 173,
-        "shap_value": 9.795454364302358
-    },
-    "innodb_stats_method": {
-        "default": "nulls_equal",
+    "query_alloc_block_size": {
+        "default": 8192,
         "dynamic": "Yes",
-        "enum_values": [
-            "nulls_equal",
-            "nulls_unequal",
-            "nulls_ignored"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 174,
-        "shap_value": 9.622759034524668
-    },
-    "skip_external_locking": {
-        "default": "ON",
-        "dynamic": "No",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 175,
-        "shap_value": 9.546951774192513
-    },
-    "updatable_views_with_limit": {
-        "default": "YES",
-        "dynamic": "Yes",
-        "enum_values": [
-            "YES",
-            "NO"
-        ],
+        "max": 134217728,
+        "min": 1024,
         "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 176,
-        "shap_value": 8.769756429826819
-    },
-    "innodb_api_bk_commit_interval": {
-        "default": 5,
-        "dynamic": "Yes",
-        "max": 1073741824,
-        "min": 1,
-        "scope": "Global",
         "type": "integer",
-        "important_rank": 177,
-        "shap_value": 8.634605369604582
+        "important_rank": 105,
+        "shap_value": 53.53247977589622
     },
-    "sync_frm": {
-        "default": "ON",
+    "max_delayed_threads": {
+        "default": 20,
+        "dynamic": "Yes",
+        "max": 16384,
+        "min": 0,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 106,
+        "shap_value": 53.03991538382219
+    },
+    "slow_query_log": {
+        "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
             "ON",
@@ -1913,10 +1120,86 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 178,
-        "shap_value": 8.040320477406159
+        "important_rank": 107,
+        "shap_value": 51.59386407499615
     },
-    "skip_networking": {
+    "innodb_ft_cache_size": {
+        "default": 8000000,
+        "dynamic": "No",
+        "max": 80000000,
+        "min": 1600000,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 108,
+        "shap_value": 51.477259077667945
+    },
+    "require_secure_transport": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 109,
+        "shap_value": 51.06499869836545
+    },
+    "binlog_group_commit_sync_delay": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 1000000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 110,
+        "shap_value": 50.509904891440016
+    },
+    "innodb_cmp_per_index_enabled": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 111,
+        "shap_value": 50.14050844568924
+    },
+    "innodb_use_native_aio": {
+        "default": "ON",
+        "dynamic": "No",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 112,
+        "shap_value": 48.07296963984697
+    },
+    "innodb_max_purge_lag_delay": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 10000000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 113,
+        "shap_value": 47.793018300002295
+    },
+    "innodb_log_buffer_size": {
+        "default": 16777216,
+        "dynamic": "No",
+        "max": 4294967295,
+        "min": 262144,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 114,
+        "shap_value": 46.585895827733985
+    },
+    "innodb_api_enable_mdl": {
         "default": "OFF",
         "dynamic": "No",
         "enum_values": [
@@ -1925,18 +1208,8 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 179,
-        "shap_value": 8.006857552825638
-    },
-    "binlog_cache_size": {
-        "default": 32768,
-        "dynamic": "Yes",
-        "max": 4294967296,
-        "min": 4096,
-        "scope": "Global",
-        "type": "integer",
-        "important_rank": 180,
-        "shap_value": 7.966542606688837
+        "important_rank": 115,
+        "shap_value": 45.36897057860039
     },
     "delay_key_write": {
         "default": "ON",
@@ -1948,20 +1221,18 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 181,
-        "shap_value": 7.73765304424352
+        "important_rank": 116,
+        "shap_value": 45.27741874453283
     },
-    "autocommit": {
-        "default": "ON",
+    "max_seeks_for_key": {
+        "default": 18446744073709500416,
         "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
+        "max": 18446744073709551615,
+        "min": 1,
         "scope": "Global, Session",
-        "type": "enum",
-        "important_rank": 182,
-        "shap_value": 7.513101310607693
+        "type": "integer",
+        "important_rank": 117,
+        "shap_value": 44.609567158404204
     },
     "binlog_format": {
         "default": "ROW",
@@ -1973,20 +1244,52 @@
         ],
         "scope": "Global, Session",
         "type": "enum",
-        "important_rank": 183,
-        "shap_value": 7.477698308585332
+        "important_rank": 118,
+        "shap_value": 43.845779117885385
     },
-    "innodb_log_files_in_group": {
-        "default": 2,
-        "dynamic": "No",
-        "max": 10,
-        "min": 2,
+    "innodb_file_per_table": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 119,
+        "shap_value": 43.77188443163746
+    },
+    "max_connections": {
+        "default": 151,
+        "dynamic": "Yes",
+        "max": 100000,
+        "min": 1,
         "scope": "Global",
         "type": "integer",
-        "important_rank": 184,
-        "shap_value": 7.104663745943896
+        "important_rank": 120,
+        "shap_value": 42.19928717545686
     },
-    "keep_files_on_create": {
+    "max_length_for_sort_data": {
+        "default": 1024,
+        "dynamic": "Yes",
+        "max": 8388608,
+        "min": 4,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 121,
+        "shap_value": 41.49534222868358
+    },
+    "preload_buffer_size": {
+        "default": 32768,
+        "dynamic": "Yes",
+        "max": 1073741824,
+        "min": 1024,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 122,
+        "shap_value": 40.867516731227646
+    },
+    "end_markers_in_json": {
         "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
@@ -1995,8 +1298,170 @@
         ],
         "scope": "Global, Session",
         "type": "enum",
-        "important_rank": 185,
-        "shap_value": 6.706324348538497
+        "important_rank": 123,
+        "shap_value": 37.022617102908924
+    },
+    "log_slow_admin_statements": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 124,
+        "shap_value": 36.90087975155138
+    },
+    "max_prepared_stmt_count": {
+        "default": 16382,
+        "dynamic": "Yes",
+        "max": 1048576,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 125,
+        "shap_value": 35.86914374174276
+    },
+    "read_rnd_buffer_size": {
+        "default": 262144,
+        "dynamic": "Yes",
+        "max": 134217728,
+        "min": 1,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 126,
+        "shap_value": 35.5777890643142
+    },
+    "key_buffer_size": {
+        "default": 8388608,
+        "dynamic": "Yes",
+        "max": 17179869184,
+        "min": 8,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 127,
+        "shap_value": 34.67006547115887
+    },
+    "log_builtin_as_identified_by_password": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 128,
+        "shap_value": 33.77757796675991
+    },
+    "binlog_cache_size": {
+        "default": 32768,
+        "dynamic": "Yes",
+        "max": 4294967296,
+        "min": 4096,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 129,
+        "shap_value": 32.769356264316635
+    },
+    "innodb_ft_num_word_optimize": {
+        "default": 2000,
+        "dynamic": "Yes",
+        "max": 10000,
+        "min": 1000,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 130,
+        "shap_value": 32.65917865457642
+    },
+    "query_cache_wlock_invalidate": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 131,
+        "shap_value": 32.42992071005423
+    },
+    "innodb_optimize_fulltext_only": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 132,
+        "shap_value": 31.856152060159662
+    },
+    "binlog_stmt_cache_size": {
+        "default": 32768,
+        "dynamic": "Yes",
+        "max": 4294967296,
+        "min": 4096,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 133,
+        "shap_value": 30.95503184342971
+    },
+    "max_digest_length": {
+        "default": 1024,
+        "dynamic": "No",
+        "max": 1048576,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 134,
+        "shap_value": 30.785510654094935
+    },
+    "max_allowed_packet": {
+        "default": 4194304,
+        "dynamic": "Yes",
+        "max": 1073741824,
+        "min": 1024,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 135,
+        "shap_value": 30.71695924426327
+    },
+    "query_cache_min_res_unit": {
+        "default": 4096,
+        "dynamic": "Yes",
+        "max": 65536,
+        "min": 512,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 136,
+        "shap_value": 29.210520586346522
+    },
+    "old_alter_table": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 137,
+        "shap_value": 28.63249535911056
+    },
+    "log_slave_updates": {
+        "default": "OFF",
+        "dynamic": "No",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 138,
+        "shap_value": 26.66367395035093
     },
     "bulk_insert_buffer_size": {
         "default": 8388608,
@@ -2005,10 +1470,116 @@
         "min": 0,
         "scope": "Global, Session",
         "type": "integer",
-        "important_rank": 186,
-        "shap_value": 6.264393256295128
+        "important_rank": 139,
+        "shap_value": 25.72813705990666
     },
-    "log_queries_not_using_indexes": {
+    "binlog_order_commits": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 140,
+        "shap_value": 23.782657354890897
+    },
+    "innodb_log_files_in_group": {
+        "default": 2,
+        "dynamic": "No",
+        "max": 10,
+        "min": 2,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 141,
+        "shap_value": 23.751156290856684
+    },
+    "innodb_max_undo_log_size": {
+        "default": 1073741824,
+        "dynamic": "Yes",
+        "max": 18446700000000000000,
+        "min": 10485760,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 142,
+        "shap_value": 23.499451114129904
+    },
+    "innodb_ft_max_token_size": {
+        "default": 84,
+        "dynamic": "No",
+        "max": 84,
+        "min": 10,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 143,
+        "shap_value": 23.256706594984873
+    },
+    "innodb_stats_auto_recalc": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 144,
+        "shap_value": 22.974297373414796
+    },
+    "key_cache_division_limit": {
+        "default": 100,
+        "dynamic": "Yes",
+        "max": 100,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 145,
+        "shap_value": 22.65126267574562
+    },
+    "group_concat_max_len": {
+        "default": 1024,
+        "dynamic": "Yes",
+        "max": 18446700000000000000,
+        "min": 4,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 146,
+        "shap_value": 22.602881785774144
+    },
+    "innodb_open_files": {
+        "default": 2000,
+        "dynamic": "No",
+        "max": 655350,
+        "min": 10,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 147,
+        "shap_value": 22.299455331826707
+    },
+    "lower_case_table_names": {
+        "default": 0,
+        "dynamic": "No",
+        "max": 2,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 148,
+        "shap_value": 22.261206462422336
+    },
+    "log_syslog_include_pid": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 149,
+        "shap_value": 22.166267840793033
+    },
+    "innodb_stats_include_delete_marked": {
         "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
@@ -2017,10 +1588,32 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 187,
-        "shap_value": 6.0419018922942325
+        "important_rank": 150,
+        "shap_value": 21.83664690311303
     },
-    "innodb_use_native_aio": {
+    "updatable_views_with_limit": {
+        "default": "YES",
+        "dynamic": "Yes",
+        "enum_values": [
+            "YES",
+            "NO"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 151,
+        "shap_value": 21.544651990531392
+    },
+    "max_binlog_cache_size": {
+        "default": 18446744073709500416,
+        "dynamic": "Yes",
+        "max": 18446744073709551615,
+        "min": 4096,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 152,
+        "shap_value": 21.274583885956112
+    },
+    "skip_external_locking": {
         "default": "ON",
         "dynamic": "No",
         "enum_values": [
@@ -2029,8 +1622,98 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 188,
-        "shap_value": 5.368424880100167
+        "important_rank": 153,
+        "shap_value": 20.208779300351097
+    },
+    "innodb_api_bk_commit_interval": {
+        "default": 5,
+        "dynamic": "Yes",
+        "max": 1073741824,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 154,
+        "shap_value": 19.919463455058263
+    },
+    "sync_frm": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 155,
+        "shap_value": 19.279718930142362
+    },
+    "innodb_commit_concurrency": {
+        "default": 0,
+        "dynamic": "Yes",
+        "max": 1000,
+        "min": 0,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 156,
+        "shap_value": 19.037008009302458
+    },
+    "innodb_stats_on_metadata": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 157,
+        "shap_value": 18.85352106491256
+    },
+    "autocommit": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 158,
+        "shap_value": 18.284142897031817
+    },
+    "innodb_io_capacity": {
+        "default": 200,
+        "dynamic": "Yes",
+        "max": 2000000,
+        "min": 100,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 159,
+        "shap_value": 18.11103761865259
+    },
+    "binlog_rows_query_log_events": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 160,
+        "shap_value": 16.885064698533945
+    },
+    "skip_networking": {
+        "default": "OFF",
+        "dynamic": "No",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 161,
+        "shap_value": 15.971684441824712
     },
     "innodb_log_compressed_pages": {
         "default": "ON",
@@ -2041,22 +1724,10 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 189,
-        "shap_value": 4.3020692130555105
+        "important_rank": 162,
+        "shap_value": 15.847076254773652
     },
-    "innodb_api_enable_mdl": {
-        "default": "OFF",
-        "dynamic": "No",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 190,
-        "shap_value": 3.9848511374830764
-    },
-    "show_compatibility_56": {
+    "mysql_native_password_proxy_users": {
         "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
@@ -2065,30 +1736,8 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 191,
-        "shap_value": 3.5030543557745575
-    },
-    "local_infile": {
-        "default": "ON",
-        "dynamic": "Yes",
-        "enum_values": [
-            "ON",
-            "OFF"
-        ],
-        "scope": "Global",
-        "type": "enum",
-        "important_rank": 192,
-        "shap_value": 3.4913173601361156
-    },
-    "multi_range_count": {
-        "default": 256,
-        "dynamic": "Yes",
-        "max": 4294967295,
-        "min": 1,
-        "scope": "Global, Session",
-        "type": "integer",
-        "important_rank": 193,
-        "shap_value": 2.5860496184055437
+        "important_rank": 163,
+        "shap_value": 15.515024103304349
     },
     "innodb_undo_log_truncate": {
         "default": "OFF",
@@ -2099,10 +1748,35 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 194,
-        "shap_value": 2.3747524208822934
+        "important_rank": 164,
+        "shap_value": 15.071067870167042
     },
-    "check_proxy_users": {
+    "innodb_flush_log_at_trx_commit": {
+        "default": 1,
+        "dynamic": "Yes",
+        "enum_values": [
+            "0",
+            "1",
+            "2"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 165,
+        "shap_value": 14.061139764088306
+    },
+    "innodb_adaptive_flushing": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 166,
+        "shap_value": 13.63831896244346
+    },
+    "innodb_ft_enable_diag_print": {
         "default": "OFF",
         "dynamic": "Yes",
         "enum_values": [
@@ -2111,8 +1785,111 @@
         ],
         "scope": "Global",
         "type": "enum",
-        "important_rank": 195,
-        "shap_value": 1.1692080976490367
+        "important_rank": 167,
+        "shap_value": 13.522081808412212
+    },
+    "innodb_deadlock_detect": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 168,
+        "shap_value": 12.691154430751512
+    },
+    "multi_range_count": {
+        "default": 256,
+        "dynamic": "Yes",
+        "max": 4294967295,
+        "min": 1,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 169,
+        "shap_value": 12.051496143709716
+    },
+    "log_timestamps": {
+        "default": "UTC",
+        "dynamic": "Yes",
+        "enum_values": [
+            "UTC",
+            "SYSTEM"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 170,
+        "shap_value": 11.966069577318752
+    },
+    "innodb_print_all_deadlocks": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 171,
+        "shap_value": 11.875803638007469
+    },
+    "log_statements_unsafe_for_binlog": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 172,
+        "shap_value": 11.285904798364955
+    },
+    "old_passwords": {
+        "default": 0,
+        "dynamic": "Yes",
+        "enum_values": [
+            "0",
+            "2"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 173,
+        "shap_value": 10.54485872189391
+    },
+    "innodb_flushing_avg_loops": {
+        "default": 30,
+        "dynamic": "Yes",
+        "max": 1000,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 174,
+        "shap_value": 10.385543758391371
+    },
+    "innodb_rollback_segments": {
+        "default": 128,
+        "dynamic": "Yes",
+        "max": 128,
+        "min": 1,
+        "scope": "Global",
+        "type": "integer",
+        "important_rank": 175,
+        "shap_value": 10.256199999585949
+    },
+    "innodb_default_row_format": {
+        "default": "DYNAMIC",
+        "dynamic": "Yes",
+        "enum_values": [
+            "DYNAMIC",
+            "COMPACT",
+            "REDUNDANT"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 176,
+        "shap_value": 9.516620712971987
     },
     "innodb_stats_persistent": {
         "default": "ON",
@@ -2123,8 +1900,231 @@
         ],
         "scope": "Global",
         "type": "enum",
+        "important_rank": 177,
+        "shap_value": 9.439474907907602
+    },
+    "binlog_error_action": {
+        "default": "ABORT_SERVER",
+        "dynamic": "Yes",
+        "enum_values": [
+            "IGNORE_ERROR",
+            "ABORT_SERVER"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 178,
+        "shap_value": 9.36290026750791
+    },
+    "max_points_in_geometry": {
+        "default": 65536,
+        "dynamic": "Yes",
+        "max": 1048576,
+        "min": 3,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 179,
+        "shap_value": 8.563154422878396
+    },
+    "offline_mode": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 180,
+        "shap_value": 8.421139885925674
+    },
+    "log_queries_not_using_indexes": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 181,
+        "shap_value": 8.390806895786294
+    },
+    "innodb_disable_sort_file_cache": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 182,
+        "shap_value": 8.315305538135952
+    },
+    "local_infile": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 183,
+        "shap_value": 7.412993301603302
+    },
+    "net_buffer_length": {
+        "default": 16384,
+        "dynamic": "Yes",
+        "max": 1048576,
+        "min": 1024,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 184,
+        "shap_value": 7.183579483536146
+    },
+    "master_verify_checksum": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 185,
+        "shap_value": 6.82687582684937
+    },
+    "innodb_api_enable_binlog": {
+        "default": "OFF",
+        "dynamic": "No",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 186,
+        "shap_value": 5.282080001323127
+    },
+    "skip_name_resolve": {
+        "default": "OFF",
+        "dynamic": "No",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 187,
+        "shap_value": 4.28283501200905
+    },
+    "innodb_rollback_on_timeout": {
+        "default": "OFF",
+        "dynamic": "No",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 188,
+        "shap_value": 3.7132908544666385
+    },
+    "optimizer_prune_level": {
+        "default": 1,
+        "dynamic": "Yes",
+        "max": 1,
+        "min": 0,
+        "scope": "Global, Session",
+        "type": "integer",
+        "important_rank": 189,
+        "shap_value": 3.1306957365377963
+    },
+    "innodb_ft_enable_stopword": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 190,
+        "shap_value": 3.0549188755234526
+    },
+    "keep_files_on_create": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
+        "important_rank": 191,
+        "shap_value": 2.851852898950283
+    },
+    "check_proxy_users": {
+        "default": "OFF",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 192,
+        "shap_value": 2.787856440312255
+    },
+    "log_bin_use_v1_row_events": {
+        "default": "OFF",
+        "dynamic": "No",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 193,
+        "shap_value": 2.7175723256419864
+    },
+    "innodb_flush_sync": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 194,
+        "shap_value": 2.681146942115771
+    },
+    "innodb_stats_method": {
+        "default": "nulls_equal",
+        "dynamic": "Yes",
+        "enum_values": [
+            "nulls_equal",
+            "nulls_unequal",
+            "nulls_ignored"
+        ],
+        "scope": "Global",
+        "type": "enum",
+        "important_rank": 195,
+        "shap_value": 2.212679304749432
+    },
+    "innodb_strict_mode": {
+        "default": "ON",
+        "dynamic": "Yes",
+        "enum_values": [
+            "ON",
+            "OFF"
+        ],
+        "scope": "Global, Session",
+        "type": "enum",
         "important_rank": 196,
-        "shap_value": 1.0951564691267492
+        "shap_value": 1.6535519534465357
     },
     "completion_type": {
         "default": "NO_CHAIN",
