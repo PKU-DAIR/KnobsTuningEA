@@ -22,7 +22,7 @@ from .SMAC import SMAC
 from smac.initial_design.default_configuration_design import DefaultConfiguration
 from hyperopt import fmin, tpe, hp
 from autotune.turbo.turbo_m import TurboM
-from openbox.utils.config_space import ConfigurationSpace, UniformIntegerHyperparameter, CategoricalHyperparameter
+from openbox.utils.config_space import ConfigurationSpace, UniformIntegerHyperparameter, CategoricalHyperparameter, UniformFloatHyperparameter
 from openbox.optimizer.generic_smbo import SMBO
 from autotune.workload_map import WorkloadMapping
 
@@ -157,7 +157,7 @@ class MySQLTuner:
         else:
             fn = 'gp_data.res'
         f = open(fn, 'a')
-        internal_metrics, metrics, resource = self.env.initialize()
+        '''internal_metrics, metrics, resource = self.env.initialize()
         logger.info('[Env initialized][Metrics tps:{} lat: {} qps: {}]'.format(
             metrics[0], metrics[1], metrics[2]
         ))
@@ -169,7 +169,7 @@ class MySQLTuner:
                                 resource[0], resource[1], resource[2], resource[3], resource[4],
                                 resource[5], resource[6], resource[7], list(internal_metrics))
         f.write(res)
-        f.close()
+        f.close()'''
         best_knob = self.env.default_knobs
         f = open(fn, 'a')
         action_df, df_r, internalm_matrix = get_action_data_json(self.lhs_log)
@@ -581,7 +581,9 @@ class MySQLTuner:
                     knob = UniformIntegerHyperparameter(name, int(min_val/1000), int(max_val/1000), default_value=int(value['default']/1000))
                 else:
                     knob = UniformIntegerHyperparameter(name, min_val, max_val, default_value=value['default'])
-
+            elif knob_type == 'float':
+                min_val, max_val = value['min'], value['max']
+                knob = UniformFloatHyperparameter(name, min_val, max_val, default_value=value['default'])
             config_space.add_hyperparameters([knob])
 
         task_id = self.task_id
@@ -957,7 +959,9 @@ class MySQLTuner:
                     knob = UniformIntegerHyperparameter(name, int(min_val/1000), int(max_val/1000), default_value=int(value['default']/1000))
                 else:
                     knob = UniformIntegerHyperparameter(name, min_val, max_val, default_value=value['default'])
-
+            elif knob_type == 'float':
+                min_val, max_val = value['min'], value['max']
+                knob = UniformFloatHyperparameter(name, min_val, max_val, default_value=value['default'])
             config_space.add_hyperparameters([knob])
 
         task_id = self.task_id

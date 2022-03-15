@@ -46,7 +46,7 @@ class SMAC(object):
                         knob = UniformIntegerHyperparameter(name, min_val, max_val, default_value=value['default'])
             elif knob_type == 'float':
                 min_val, max_val = value['min'], value['max']
-                knob = UniformFloatHyperparameter(name, min_val, max_val, default_value=value['default'], q=value['stride'])
+                knob = UniformFloatHyperparameter(name, min_val, max_val, default_value=value['default'])
             self.cs.add_hyperparameter(knob)
 
         self.scenario = Scenario({"run_obj": "quality",  # we optimize quality (alternative runtime)
